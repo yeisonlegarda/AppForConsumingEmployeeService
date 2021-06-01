@@ -1,0 +1,18 @@
+spring:
+    application:
+        name: Thales Test
+    main.allow-bean-definition-overriding: true
+    jackson:
+        default-property-inclusion: non_null
+        date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+        serialization:
+            write-dates-as-timestamps: false
+            write-date-timestamps-as-nanoseconds: false
+    
+server:
+    servlet.context-path: /thalestest/api
+    port: 90
+    
+    
+config:
+    service.employeesUrl: ${EMPLOYEES_SERVICE:http://dummy.restapiexample.com/api/v1/}
